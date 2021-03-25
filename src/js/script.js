@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1000,
         adaptiveHeight: true,
-        // autoplay: true,
+        autoplay: true,
         // autoplaySpeed: 2000,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow_right.png"></button>',
@@ -10,7 +10,12 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: {
-                    dots: true,
+                    dots: false,
+                    arrows: true
+                },
+                breakpoint: 576,
+                settings: {
+                    dots: false,
                     arrows: false
                 }
             }
