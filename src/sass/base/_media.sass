@@ -34,6 +34,11 @@
             font-size: 17px
         &__text
             font-size: 15px
+        
+    .footer
+        &__addr, &__phone
+            font-size: 18px
+            line-height: 18px
 
 @media (max-width: 991px)
     .container
@@ -131,6 +136,23 @@
             font-size: 13px
         &__text
             font-size: 14px
+
+    .footer
+        height: 530px
+        &__info
+            width: 45%
+            height: 200px
+            padding: 25px 60px 25px
+        &__addr, &__phone
+            font-size: 16px
+            line-height: 16px
+        &__social
+            width: 90%
+            &-item
+                width: 40px
+                height: 40px
+                img
+                    width: 20px
 
 @media (max-width: 767px)
     .container
@@ -295,6 +317,18 @@
         &__name, &__marathons, &__text
             text-align: center
 
+    .footer
+        height: 480px
+        &__info
+            height: 170px
+            padding: 25px 30px 25px
+        &__addr, &__phone
+            font-size: 15px
+            line-height: 15px
+            margin-bottom: 25px
+        &__social
+            width: 90%
+
 @media (max-width: 575px)
     .header
         &__contacts
@@ -371,3 +405,26 @@
             display: none
             &_mobile
                 display: block
+    
+    .footer
+        height: 450px
+        &__info
+            display: none
+        &__info_mobile
+            position: inherit
+            display: block
+            height: 120px
+            width: 100%
+            padding: 10px 10px 20px
+        &__addr, &__phone
+            font-size: 14px
+            line-height: 14px
+            margin-bottom: 15px
+        &__social
+            width: 80%
+            justify-content: space-around
+            &-item
+                width: 30px
+                height: 30px
+                img
+                    width: 15px
