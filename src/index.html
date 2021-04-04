@@ -25,7 +25,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+48888888888" class="header__phone">+4 (888) 888-88-88</a>
-                    <button class="button">zamów rozmowę</button>
+                    <button data-modal="consultation" class="button">zamów rozmowę</button>
                 </div>
                 <div class="hamburger">
                     <span></span>
@@ -37,7 +37,7 @@
             <ul class="menu">
                 <li class="menu__item"><a href="#" class="menu__link">RunSmart</a></li>
                 <li class="menu__item"><a href="#advantages" class="menu__link">Atuty</a></li>
-                <li class="menu__item"><a href="#consultation" class="menu__link">Konsultacja</a></li>
+                <li class="menu__item"><a href="#consulting" class="menu__link">Konsultacja</a></li>
                 <li class="menu__item"><a href="#catalog" class="menu__link">Katalog</a></li>
                 <li class="menu__item"><a href="#review" class="menu__link">Opinie</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Gdzie jesteśmy</a></li>
@@ -47,7 +47,7 @@
 
                 <div class="promo__mobile">
                     <a href="tel:+48888888888" class="promo__phone">+4 (888) 888-88-88</a>
-                    <button class="button button_mobile">zamów rozmowę</button>
+                    <button data-modal="consultation" class="button button_mobile">zamów rozmowę</button>
                 </div>
 
                 <h1 class="promo__header">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">
+                <button data-modal="consultation" class="button button_main">
                     zamów konsultację
                 </button>
 
@@ -116,7 +116,7 @@
         </div>
     </section>
 
-    <section id="consultation" class="consultation">
+    <section id="consulting" class="consultation">
         <div class="container">
             <h2 class="title title_left">Otrzymaj darmową konsultację<br>
                 dotyczącą wyboru pulsometra</h2>
@@ -195,7 +195,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/polar_ft-1.png" alt="polar ft-1" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Pulsometr Polar FT1</div>
+                            <div class="catalog-item__subtitle">Pulsometr Suunto M2</div>
                             <div class="catalog-item__descr">Do pierwszych kroków podczas treningu, opartych o tętno
                             </div>
                             <a href="#" class="catalog-item__link">Szczegóły</a>
@@ -513,6 +513,38 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Wypełnij formularz zgłoszeniowy</div>
+            <div class="modal__descr">a my oddzwonimy do Ciebie w ciągu 10 minut</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required placeholder="Twoje imię" type="text">
+                <input name="phone" required placeholder="Twoj telefon" type="number">
+                <input name="email" required placeholder="Twoje E-mail" type="email">
+                <button class="button button_submit">Zamówić konsultację</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Twoje zamówienie:</div>
+            <div class="modal__descr">Pulsometr Polar FT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required placeholder="Twoje imię" type="text">
+                <input name="phone" required placeholder="Twoj telefon" type="number">
+                <input name="email" required placeholder="Twoje E-mail" type="email">
+                <button class="button button_submit">Kupić</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Dziękujemy za zgłoszenie!</div>
+            <div class="modal__descr">Nasz menedżer wkrótce się z Tobą skontaktuje!</div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -40,6 +40,20 @@
             font-size: 18px
             line-height: 18px
 
+    .modal
+        padding: 30px 35px 35px 35px
+        width: 360px
+        min-height: 390px
+        &__close
+            font-size: 35px
+            right: -35px
+        &__subtitle
+            font-size: 18px
+            line-height: 18px
+        .button_submit
+            margin: 0 auto
+            width: 90%
+
 @media (max-width: 991px)
     .container
         width: 85vw
@@ -153,6 +167,31 @@
                 height: 40px
                 img
                     width: 20px
+
+    .modal
+        padding: 25px 30px 30px 30px
+        width: 340px
+        min-height: 340px
+        &__close
+            font-size: 30px
+            right: -30px
+        &__descr
+            font-size: 13px
+            line-height: 13px
+        &__subtitle
+            font-size: 17px
+            line-height: 17px
+        .button_submit
+            height: 50px
+            margin: 0 auto
+            width: 90%
+        .feed-form
+            width: 100%
+            input
+                height: 40px
+                font-size: 13px
+                line-height: 13px
+
 
 @media (max-width: 767px)
     .container
@@ -329,6 +368,19 @@
         &__social
             width: 90%
 
+    .modal
+        width: 300px
+        &__close
+            font-size: 25px
+            line-height: 18px
+            right: -25px
+        &__subtitle
+            font-size: 16px
+            font-size: 16px
+        .button_submit
+            height: 40px
+            font-size: 14px
+
 @media (max-width: 575px)
     .header
         &__contacts
@@ -428,3 +480,21 @@
                 height: 30px
                 img
                     width: 15px
+    
+    .modal
+        width: 80%
+        min-height: 320px
+        padding: 20px 20px 25px
+        &__close
+            right: -20px
+        &__subtitle
+            font-size: 15px
+            line-height: 15px
+        .feed-form
+            &_mt25
+                margin-top: 20px
+            input
+                height: 35px
+            .button_submit
+                height: 35px
+                font-size: 13px
