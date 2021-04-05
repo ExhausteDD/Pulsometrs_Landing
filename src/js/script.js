@@ -1,24 +1,24 @@
-// Hamburger button for navigation on small resolutions
-window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.menu'),
-        menuItem = document.querySelectorAll('.menu__item'),
-        hamburger = document.querySelector('.hamburger');
+$(document).ready(function() {
+    // Hamburger button for navigation on small resolutions
+    window.addEventListener('DOMContentLoaded', () => {
+        const menu = document.querySelector('.menu'),
+            menuItem = document.querySelectorAll('.menu__item'),
+            hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('menu_active');
-    });
-
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
+        hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('hamburger_active');
             menu.classList.toggle('menu_active');
-        })
-    })
-})
+        });
 
-//Slick slider
-$(document).ready(function() {
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('hamburger_active');
+                menu.classList.toggle('menu_active');
+            });
+        });
+    });
+
+    //Slick slider
     $('.carousel__inner').slick({
         speed: 1000,
         adaptiveHeight: true,
@@ -75,5 +75,36 @@ $(document).ready(function() {
             $('.overlay, #order').fadeIn('slow');
         });
     });
-});
 
+    //Validating forms vith using JQuery Validating Plugin
+    function validateForms(form) {
+        $(form).validate({
+            rules:{
+                name: {
+                    required: true,
+                    minlength: 2
+                  },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Proszę wpisać swoje imię",
+                    minlength: jQuery.validator.format("Proszę wprowadzić więcej {0} znaków!")
+                },
+                phone: "Proszę wpisać swój numer telefonu",
+                email: {
+                  required: "Proszę wpisać swój adres pocztowy",
+                  email: "Twój adres pocztowy musi być w formacie name@domain.com"
+                }
+            }
+        });
+    }
+
+    validateForms('#consultation form');
+    validateForms('#order form');
+    validateForms('#consulting form');
+});
