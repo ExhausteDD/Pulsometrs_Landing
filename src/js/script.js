@@ -107,4 +107,26 @@ $(document).ready(function() {
     validateForms('#consultation form');
     validateForms('#order form');
     validateForms('#consulting form');
+
+    //Masked input plugin for JQuery
+    $('input[name=phone]').mask("(999) 999-999");
+
+    //Resending information to email
+    $('form').submit(function(e) {
+        e.preventDefault();
+        if ($(this).valid()) {   
+            $.ajax({
+                type: "POST",
+                url: "mailer/smart.php",
+                data: $(this).serialize()
+            }).done(function() {
+                $(this).find("input").val("");
+                $('#consultation, #order').fadeOut();
+                $('.overlay, #thanks').fadeIn('slow');
+ 
+                $('form').trigger('reset');
+            });
+        }
+        return false;
+    });
 });
