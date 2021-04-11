@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -35,12 +35,12 @@
             </header>
 
             <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__link">RunSmart</a></li>
+                <li class="menu__item"><a href="#up" class="menu__link">RunSmart</a></li>
                 <li class="menu__item"><a href="#advantages" class="menu__link">Atuty</a></li>
                 <li class="menu__item"><a href="#consulting" class="menu__link">Konsultacja</a></li>
                 <li class="menu__item"><a href="#catalog" class="menu__link">Katalog</a></li>
                 <li class="menu__item"><a href="#review" class="menu__link">Opinie</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Gdzie jesteśmy</a></li>
+                <li class="menu__item"><a href="#map" class="menu__link">Gdzie jesteśmy</a></li>
             </ul>
 
             <div class="promo__wrapper">
@@ -92,7 +92,7 @@
             <h2 class="title">Nasze atuty</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item">
-                    <img src="icons/advantages_cup.png" alt="cup" class="advantages__icon">
+                    <img src="icons/advantages_cup.png" alt="cup" class="advantages__icon advantages__icon_animation-cup">
                     <div class="advantages__subheader">Dzielimy się doświadczeniem</div>
                     <div class="advantages__text">Nasi pracownicy są zawsze gotowi do dzielenia się swoim
                         doświadczeniem,
@@ -100,13 +100,13 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages_heart.png" alt="heart" class="advantages__icon">
+                    <img src="icons/advantages_heart.png" alt="heart" class="advantages__icon advantages__icon_animation-heart">
                     <div class="advantages__subheader">Dbamy o zdrowie</div>
                     <div class="advantages__text">Pracujemy dla tego, aby Twoje zajęcia sportowe były korzystne dla
                         Twojego zdrowia i sprawiały radość Tobie i Twoim bliskim!</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages_shoe.png" alt="shoe" class="advantages__icon">
+                    <img src="icons/advantages_shoe.png" alt="shoe" class="advantages__icon advantages__icon_animation-shoe">
                     <div class="advantages__subheader">Nauczymy Cie biegac</div>
                     <div class="advantages__text">Pomagamy w nauce prawidłowej techniki biegania! Współpracujemy z
                         największą szkołą biegania w Polsce - <a href="https://bieganie.pl/"
@@ -490,7 +490,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="map" class="footer">
         <div class="footer__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.9736516992098!2d21.97562555986323!3d50.04932487843057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfb6d7660595f%3A0xe2a8d6d89bb4150c!2sKrakowska%2018G%2C%2035-111%20Rzesz%C3%B3w!5e0!3m2!1sru!2spl!4v1617451321091!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -545,6 +545,10 @@
             <div class="modal__descr">Nasz menedżer wkrótce się z Tobą skontaktuje!</div>
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/arrow_up.svg" alt="up">
+    </a>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
